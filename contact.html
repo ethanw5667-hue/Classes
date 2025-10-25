@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Scitechnia</title>
+<meta name="description" content="Contact — Scitechnia">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-badge" aria-hidden="true"></span>
+      <span class="brand-name">Scitechnia</span>
+    </a>
+    <button class="menu" aria-controls="mainnav" aria-expanded="false">Menu</button>
+    <nav id="mainnav" class="nav">
+      <a class="" href="index.html">Home</a>
+      <a class="" href="about.html">About</a>
+      <a class="" href="programs.html">Programs</a>
+      <a class="" href="workshops.html">Workshops</a>
+      <a class="" href="schedule.html">Schedule</a>
+      <a class="" href="facility.html">Facility</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="section"><div class="container reveal">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:info@scitechnia.org"><strong>info@scitechnia.org</strong></a></p>
+  <form class="card" style="margin-top:12px" name="contact" method="post" action="#" onsubmit="alert('Static demo form — connect to a backend or a form service.'); return false;">
+    <h3>Send a message</h3>
+    <div style="display:grid; gap:10px; grid-template-columns:repeat(2,minmax(0,1fr));">
+      <input aria-label="Name" required placeholder="Your name" style="padding:10px; border:1px solid var(--line); border-radius:10px">
+      <input type="email" aria-label="Email" required placeholder="Your email" style="padding:10px; border:1px solid var(--line); border-radius:10px">
+    </div>
+    <textarea aria-label="Message" required placeholder="Message" rows="5" style="margin-top:10px; padding:10px; width:100%; border:1px solid var(--line); border-radius:10px"></textarea>
+    <button class="btn" type="submit" style="margin-top:10px">Send</button>
+  </form>
+</div></section>
+
+<footer class="site-footer"><div class="container">© <span id="year"></span> Scitechnia</div></footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
