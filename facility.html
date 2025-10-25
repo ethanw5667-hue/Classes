@@ -5,6 +5,20 @@
 <title>Facility — Experientia Labs</title>
 <meta name="description" content="Facility — Experientia Labs">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* Inline gallery styles so you don't have to edit assets/styles.css */
+  .facility-gallery{margin-top:8px}
+  .facility-gallery figure{margin:0}
+  .facility-gallery img{width:100%;height:auto;display:block;border-radius:12px}
+  .facility-gallery figcaption{margin-top:8px;color:#555}
+  .facility-gallery .grid-top{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  }
+  .facility-gallery .full{margin-top:14px}
+  @media (max-width: 820px){
+    .facility-gallery .grid-top{grid-template-columns:1fr}
+  }
+</style>
 </head>
 <body>
 <div class="progress"></div>
@@ -39,40 +53,37 @@
   </div>
 </section>
 
-<!-- New gallery section -->
+<!-- Unboxed, two-up top + full-width bottom gallery -->
 <section class="section alt">
-  <div class="container">
-    <div class="cards" style="margin-top:8px">
-      <!-- Teaching area -->
-      <figure class="card" style="overflow:hidden">
+  <div class="container facility-gallery">
+    <div class="grid-top">
+      <!-- Teaching area (left) -->
+      <figure>
         <img
           src="assets/facility/IMG_2201%202_HEIC.avif"
           alt="Teaching area where instruction usually happens"
-          loading="lazy"
-          style="width:100%;height:auto;border-radius:12px;display:block">
-        <figcaption style="margin-top:10px"><strong>Teaching area</strong> — instruction usually happens here (IMG_2201 2_HEIC.avif).</figcaption>
+          loading="lazy">
+        <figcaption><strong>Teaching area</strong> — instruction usually happens here (IMG_2201 2_HEIC.avif).</figcaption>
       </figure>
 
-      <!-- Labs / experimentation / workshops / meeting -->
-      <figure class="card" style="overflow:hidden">
-        <img
-          src="assets/facility/IMG_2225_HEIC.avif"
-          alt="Lab and workshop area used for experimentation and meetings"
-          loading="lazy"
-          style="width:100%;height:auto;border-radius:12px;display:block">
-        <figcaption style="margin-top:10px"><strong>Labs / experimentation / workshops / meeting</strong> — this space is used for hands-on work and team sessions (IMG_2225_HEIC.avif).</figcaption>
-      </figure>
-
-      <!-- Private room -->
-      <figure class="card" style="overflow:hidden">
+      <!-- Private room (right) -->
+      <figure>
         <img
           src="assets/facility/IMG_2198%202_HEIC.avif"
           alt="Private room"
-          loading="lazy"
-          style="width:100%;height:auto;border-radius:12px;display:block">
-        <figcaption style="margin-top:10px"><strong>Private room</strong> — quiet space for focused study or small meetings (IMG_2198 2_HEIC.avif).</figcaption>
+          loading="lazy">
+        <figcaption><strong>Private room</strong> — quiet space for focused study or small meetings (IMG_2198 2_HEIC.avif).</figcaption>
       </figure>
     </div>
+
+    <!-- Full-width main room below -->
+    <figure class="full">
+      <img
+        src="assets/facility/IMG_2225_HEIC.avif"
+        alt="Main lab and workshop area used for experimentation and meetings"
+        loading="lazy">
+      <figcaption><strong>Main room</strong> — labs, experimentation, workshops, and meetings usually happen here (IMG_2225_HEIC.avif).</figcaption>
+    </figure>
 
     <div class="card" style="margin-top:16px">
       <h3 style="margin:0 0 .5rem">Amenities</h3>
