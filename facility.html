@@ -5,23 +5,20 @@
 <title>Facility — Experientia Labs</title>
 <meta name="description" content="Facility — Experientia Labs">
 <link rel="stylesheet" href="assets/styles.css">
+
+<!-- Page-scoped layout tweaks for the gallery -->
 <style>
-  /* Inline gallery styles so you don't have to edit assets/styles.css */
-  .facility-gallery{margin-top:8px}
-  .facility-gallery figure{margin:0}
-  .facility-gallery img{width:100%;height:auto;display:block;border-radius:12px}
-  .facility-gallery figcaption{margin-top:8px;color:#555}
-  .facility-gallery .grid-top{
-    display:grid; grid-template-columns:1fr 1fr; gap:14px;
-  }
-  .facility-gallery .full{margin-top:14px}
-  @media (max-width: 820px){
-    .facility-gallery .grid-top{grid-template-columns:1fr}
-  }
+  .facility-gallery{display:grid; gap:16px}
+  .facility-row{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .figure-unboxed{margin:0; padding:0; background:transparent; border:none; box-shadow:none}
+  .figure-unboxed img{width:100%; height:auto; display:block; border-radius:12px}
+  .figure-unboxed figcaption{margin-top:10px}
+  @media (max-width:900px){ .facility-row{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
 <div class="progress"></div>
+
 <header class="site-header">
   <div class="container navbar">
     <a class="brand" href="index.html" aria-label="Home">
@@ -53,44 +50,48 @@
   </div>
 </section>
 
-<!-- Unboxed, two-up top + full-width bottom gallery -->
+<!-- Unboxed, large images: two side-by-side, one full-width -->
 <section class="section alt">
-  <div class="container facility-gallery">
-    <div class="grid-top">
-      <!-- Teaching area (left) -->
-      <figure>
+  <div class="container">
+    <div class="facility-gallery">
+
+      <!-- Row: Teaching (left) + Private room (right) -->
+      <div class="facility-row">
+        <figure class="figure-unboxed">
+          <img
+            src="assets/facility/IMG_2201%202_HEIC.avif"
+            alt="Teaching area where instruction usually happens"
+            loading="lazy">
+          <figcaption><strong>Teaching area</strong> — instruction usually happens here (IMG_2201 2_HEIC.avif).</figcaption>
+        </figure>
+
+        <figure class="figure-unboxed">
+          <img
+            src="assets/facility/IMG_2198%202_HEIC.avif"
+            alt="Private room"
+            loading="lazy">
+          <figcaption><strong>Private room</strong> — quiet space for focused study or small meetings (IMG_2198 2_HEIC.avif).</figcaption>
+        </figure>
+      </div>
+
+      <!-- Big full-width: Labs / experimentation / workshops / meeting -->
+      <figure class="figure-unboxed">
         <img
-          src="assets/facility/IMG_2201%202_HEIC.avif"
-          alt="Teaching area where instruction usually happens"
+          src="assets/facility/IMG_2225_HEIC.avif"
+          alt="Lab and workshop area used for experimentation and meetings"
           loading="lazy">
-        <figcaption><strong>Teaching area</strong> — instruction usually happens here (IMG_2201 2_HEIC.avif).</figcaption>
+        <figcaption><strong>Labs / experimentation / workshops / meeting</strong> — hands-on work and team sessions happen here (IMG_2225_HEIC.avif).</figcaption>
       </figure>
 
-      <!-- Private room (right) -->
-      <figure>
-        <img
-          src="assets/facility/IMG_2198%202_HEIC.avif"
-          alt="Private room"
-          loading="lazy">
-        <figcaption><strong>Private room</strong> — quiet space for focused study or small meetings (IMG_2198 2_HEIC.avif).</figcaption>
-      </figure>
-    </div>
+      <!-- Amenities -->
+      <div class="card" style="margin-top:4px">
+        <h3 style="margin:0 0 .5rem">Amenities</h3>
+        <ul style="margin:0">
+          <li>Washroom on site</li>
+          <li>Kitchenette for breaks</li>
+        </ul>
+      </div>
 
-    <!-- Full-width main room below -->
-    <figure class="full">
-      <img
-        src="assets/facility/IMG_2225_HEIC.avif"
-        alt="Main lab and workshop area used for experimentation and meetings"
-        loading="lazy">
-      <figcaption><strong>Main room</strong> — labs, experimentation, workshops, and meetings usually happen here (IMG_2225_HEIC.avif).</figcaption>
-    </figure>
-
-    <div class="card" style="margin-top:16px">
-      <h3 style="margin:0 0 .5rem">Amenities</h3>
-      <ul style="margin:0">
-        <li>Washroom on site</li>
-        <li>Kitchenette for breaks</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -102,6 +103,7 @@
     © <span id="year"></span> Experientia Labs
   </div>
 </footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>
