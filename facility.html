@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lab &amp; Tools — Experientia Labs</title>
+<meta name="description" content="Facility — Experientia Labs">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .facility-gallery{display:grid; gap:16px}
+  .facility-row{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  .figure-unboxed{margin:0; padding:0; background:transparent; border:none; box-shadow:none}
+  .figure-unboxed img{width:100%; height:auto; display:block; border-radius:12px}
+  .figure-unboxed figcaption{margin-top:10px}
+  @media (max-width:900px){ .facility-row{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="progress"></div>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brand-logo" src="assets/logo.png" alt="Experientia Labs logo">
+      <span class="brand-name">Experientia Labs</span>
+    </a>
+    <button class="menu" aria-controls="mainnav" aria-expanded="false">Menu</button>
+    <nav id="mainnav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Core Pathway</a>
+      <a href="workshops.html">Lab Workshops</a>
+      <a href="schedule.html">Schedule</a>
+      <a class="active" href="facility.html">Lab &amp; Tools</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Lab &amp; Tools</h2>
+    <p class="lead">Reserve bench space when workshops aren’t running. Supervision and safety sign‑off are required.</p>
+    <ul>
+      <li>Benchtop meters, oscilloscopes, power supplies</li>
+      <li>Basic fabrication &amp; prototyping</li>
+      <li>Project + competition support</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="section alt">
+  <div class="container">
+    <div class="facility-gallery">
+      <div class="facility-row">
+        <figure class="figure-unboxed">
+          <picture>
+            <source srcset="assets/facility/teaching.webp" type="image/webp">
+            <source srcset="assets/facility/teaching.jpg" type="image/jpeg">
+            <img src="assets/facility/teaching.svg" alt="Teaching area" loading="lazy">
+          </picture>
+          <figcaption><strong>Teaching area</strong> — where demos and briefings happen.</figcaption>
+        </figure>
+        <figure class="figure-unboxed">
+          <picture>
+            <source srcset="assets/facility/private.webp" type="image/webp">
+            <source srcset="assets/facility/private.jpg" type="image/jpeg">
+            <img src="assets/facility/private.svg" alt="Private room" loading="lazy">
+          </picture>
+          <figcaption><strong>Private room</strong> — quiet space for focused work.</figcaption>
+        </figure>
+      </div>
+      <figure class="figure-unboxed">
+        <picture>
+          <source srcset="assets/facility/mainlab.webp" type="image/webp">
+          <source srcset="assets/facility/mainlab.jpg" type="image/jpeg">
+          <img src="assets/facility/mainlab.svg" alt="Lab and workshop area" loading="lazy">
+        </picture>
+        <figcaption><strong>Main lab</strong> — hands-on work and team sessions.</figcaption>
+      </figure>
+      <div class="card" style="margin-top:4px">
+        <h3 style="margin:0 0 .5rem">Amenities</h3>
+        <ul style="margin:0">
+          <li>Washroom on site</li>
+          <li>Kitchenette for breaks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    Unit 6, 110 Konrad Cres. Markham ON Canada &nbsp; | &nbsp;
+    <a href="mailto:info@experientialabs.org">info@experientialabs.org</a> &nbsp; | &nbsp;
+    © <span id="year"></span> Experientia Labs
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
